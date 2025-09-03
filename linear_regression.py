@@ -5,7 +5,7 @@ import numpy as np
 class LinearRegression:
     def __init__(self):
          # weights and bias are scalar values
-         self.theta0 = np.random.uniform()
+         self.theta0 = np.random.uniform() 
          self.theta1 = np.random.uniform()
 
     def predict(self,x):
