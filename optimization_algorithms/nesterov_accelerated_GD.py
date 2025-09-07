@@ -15,8 +15,8 @@ def gradient_descent(theta0, theta1, d_theta0, d_theta1, lr):
 
 prev_theta0, prev_theta1, beta = 0, 0, 0.9
 def avg_gradients(prev_theta0, prev_theta1 , d_theta0, d_theta1):
-    prev_theta0 = beta * prev_theta0 + lr * d_theta0
-    prev_theta1 = beta * prev_theta1 + lr * d_theta1
+    prev_theta0 = beta * prev_theta0 + d_theta0
+    prev_theta1 = beta * prev_theta1 + d_theta1
 
     return prev_theta0, prev_theta1 #so far gradients
 
@@ -25,8 +25,8 @@ x = np.arange(1, 20)
 y = 2 * x + 5
 lr = 0.001
 for i in range(10):
-    look_ahead_theta0 =  theta0 - lr * beta * prev_theta0       #look ahead
-    look_ahead_theta1 =  theta1 - lr * beta * prev_theta1        #look ahead
+    look_ahead_theta0 =  theta0 - beta * prev_theta0       #look ahead
+    look_ahead_theta1 =  theta1 - beta * prev_theta1        #look ahead
     predictions = look_ahead_theta0 + look_ahead_theta1 * x
     d_theta0, d_theta1 = derivative(predictions, x, y) #calculate the gradient at look ahead point
     prev_theta0, prev_theta1 = avg_gradients(prev_theta0, prev_theta1, d_theta0, d_theta1)
