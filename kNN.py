@@ -1,5 +1,5 @@
 """
-K Nearest Neighbor allows us to get an idea of about basic approach of image classification
+K Nearest Neighbor allows us to get an idea about basic approach of image classification
 Since, images are represented as "multi-dim arrays" consist of height * weight * channels (for color images- 3 channel and grey - 1 channel) 
 The idea is to predict the labels of test images by comparing the test image pixels with the training set images pixels. 
 Computing the difference between the pixels. The result achieved speaks about similarity or how close the test image is to train image. 
@@ -8,7 +8,7 @@ Computing the difference between the pixels. The result achieved speaks about si
 
 # Let's start by creating a dummy dataset first
 """
-x_tr -> training images -> (num_samples, num_features)-(30000, 32, 32, 3) 32 pixels wide, 32 pixels tall, 3 channels
+x_tr -> training images -> (num_samples, num_features)-> shape (30000, 32, 32, 3) 32 pixels wide, 32 pixels tall, 3 channels
 y_tr -> training labels -> (num_samples, ) 
 
 x_te -> test images -> (10000, 32, 32, 3)
