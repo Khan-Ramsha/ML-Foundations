@@ -5,7 +5,7 @@ class KMeans:
         self.num_features = num_features
         self.num_clusters = num_clusters
 
-    def create_dataset(self):
+    def run_kmeans(self):
         arr = np.random.randint(1,20, size = (self.num_samples, self.num_features))
         #centroid initialization
         indices = np.random.choice(self.num_samples, size = self.num_clusters, replace= False) #pick a random indices
@@ -44,4 +44,4 @@ class KMeans:
                 break
             
 obj = KMeans(num_samples=20, num_features=3, num_clusters=2)
-obj.create_dataset()
+obj.run_kmeans()
