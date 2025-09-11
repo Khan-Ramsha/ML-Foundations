@@ -12,8 +12,8 @@ def derivative(predictions, x, y):
     return d_theta0, d_theta1
 
 def gradient_descent(theta0, theta1, d_theta0, d_theta1, prev_theta0, prev_theta1, lr, eps):
-    theta0 -= (lr/(np.sqrt(prev_theta0) + eps)) * d_theta0
-    theta1 -= (lr/(np.sqrt(prev_theta1) + eps)) * d_theta1
+    theta0 -= (lr/(np.sqrt(prev_theta0 + eps))) * d_theta0
+    theta1 -= (lr/(np.sqrt(prev_theta1 + eps))) * d_theta1
     return theta0, theta1
 
 
