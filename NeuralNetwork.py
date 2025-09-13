@@ -3,7 +3,7 @@
 The important steps to build Neural Network:
 -> Decide the model structure => number of input features, number of hidden layers, number of neurons in hidden layers and output layer
 Let's keep it simple, 
-Layer1: with 3 input features (3 neurons- x1, x2, x3)
+Layer1: with 3 input features (x1, x2, x3)
 Layer2 (Hidden layer): with 3 neurons 
 Layer3 (Output layer): with 1 neuron
 there will be 2 weight matrices - 1st matrix (from layer1 to layer2), 2nd matrix (from layer2 to layer3)
